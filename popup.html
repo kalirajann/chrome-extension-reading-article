@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reading Mode Settings</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .control-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .summarize-section {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+    #summarize-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #summarize-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    #summary-container {
+      margin-top: 15px;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+    }
+    .api-key-section {
+      margin-bottom: 15px;
+    }
+    #api-key {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    .loading {
+      text-align: center;
+      color: #666;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Reading Mode Settings</h2>
+  
+  <div class="control-group">
+    <label class="switch">
+      <input type="checkbox" id="reading-mode-toggle">
+      <span class="slider"></span>
+    </label>
+    <span>Enable Reading Mode</span>
+  </div>
+
+  <div class="control-group">
+    <label for="font-size">Font Size</label>
+    <input type="range" id="font-size" min="12" max="24" value="16">
+    <span id="font-size-value">16px</span>
+  </div>
+
+  <div class="control-group">
+    <label for="line-height">Line Height</label>
+    <input type="range" id="line-height" min="1.2" max="2" step="0.1" value="1.6">
+    <span id="line-height-value">1.6</span>
+  </div>
+
+  <div class="control-group">
+    <label for="background-color">Background Color</label>
+    <select id="background-color">
+      <option value="white">White</option>
+      <option value="#f5f5f5">Light Gray</option>
+      <option value="#e8dfd4">Sepia</option>
+      <option value="#2b2b2b">Dark</option>
+    </select>
+  </div>
+
+  <div class="control-group">
+    <label for="text-color">Text Color</label>
+    <select id="text-color">
+      <option value="black">Black</option>
+      <option value="#333333">Dark Gray</option>
+      <option value="#555555">Gray</option>
+      <option value="#ffffff">White</option>
+    </select>
+  </div>
+
+  <div class="summarize-section">
+    <div class="api-key-section">
+      <label for="api-key">OpenAI API Key</label>
+      <input type="password" id="api-key" placeholder="Enter your OpenAI API key">
+    </div>
+    <button id="summarize-btn">Summarize Article</button>
+    <div class="loading" id="loading-indicator">Generating summary...</div>
+    <div id="summary-container"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

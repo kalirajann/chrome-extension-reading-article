@@ -1,0 +1,80 @@
+/* Reading mode styles */
+.reading-mode-enabled {
+  transition: all 0.3s ease;
+}
+
+/* Hide common distracting elements when reading mode is enabled */
+.reading-mode-enabled header,
+.reading-mode-enabled footer,
+.reading-mode-enabled nav,
+.reading-mode-enabled aside,
+.reading-mode-enabled .sidebar,
+.reading-mode-enabled .ad,
+.reading-mode-enabled .advertisement,
+.reading-mode-enabled .social-share,
+.reading-mode-enabled .related-posts,
+.reading-mode-enabled .comments,
+.reading-mode-enabled #comments {
+  display: none !important;
+}
+
+/* Improve readability of links */
+.reading-mode-enabled a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Improve image display */
+.reading-mode-enabled img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em auto;
+  display: block;
+}
+
+/* Improve table readability */
+.reading-mode-enabled table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.reading-mode-enabled th,
+.reading-mode-enabled td {
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Improve code block readability */
+.reading-mode-enabled pre,
+.reading-mode-enabled code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', monospace;
+}
+
+.reading-mode-enabled pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+/* Improve blockquote styling */
+.reading-mode-enabled blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+/* Improve list readability */
+.reading-mode-enabled ul,
+.reading-mode-enabled ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.reading-mode-enabled li {
+  margin: 0.5em 0;
+} 
