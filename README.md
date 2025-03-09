@@ -65,6 +65,14 @@ A powerful Chrome extension that transforms article pages into a clean, distract
 - Chrome Browser (Latest version recommended)
 - For summarization feature: OpenAI API key (to be configured)
 
+## Sample Output
+### Screen Before Use the extension
+![image](https://github.com/user-attachments/assets/19dc2453-0054-464f-80d6-e997881b6c05)
+### Screen Using extension
+![image](https://github.com/user-attachments/assets/a30b75e5-763c-4f6a-8e9c-5991d3da40af)
+
+
+
 ## Privacy & Security
 
 - No user data is collected or stored
