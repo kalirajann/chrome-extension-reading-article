@@ -66,10 +66,18 @@ A powerful Chrome extension that transforms article pages into a clean, distract
 - For summarization feature: OpenAI API key (to be configured)
 
 ## Sample Output
-### Screen Before Use the extension
+### Screen Before Using the extension
+https://thestoryoftelling.com/books/the-right-story/
 ![image](https://github.com/user-attachments/assets/19dc2453-0054-464f-80d6-e997881b6c05)
+https://www.espncricinfo.com/series/icc-champions-trophy-2024-25-1459031/india-vs-new-zealand-final-1466428/match-report
+![image](https://github.com/user-attachments/assets/85beeab4-189b-4a09-8b28-b2d28fa99978)
+
 ### Screen Using extension
+https://thestoryoftelling.com/books/the-right-story/
 ![image](https://github.com/user-attachments/assets/a30b75e5-763c-4f6a-8e9c-5991d3da40af)
+https://www.espncricinfo.com/series/icc-champions-trophy-2024-25-1459031/india-vs-new-zealand-final-1466428/match-report
+![image](https://github.com/user-attachments/assets/c74ed1b2-f89c-4eee-9efc-2577cf7e1c7d)
+
 
 
 
